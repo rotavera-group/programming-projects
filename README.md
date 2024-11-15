@@ -23,6 +23,7 @@ To learn the basics of navigating the command line, working with `git`, and prog
 2. [Version Control with Git](https://swcarpentry.github.io/git-novice/)
 3. [Programming with Python](https://swcarpentry.github.io/python-novice-inflammation/)
 4. [Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder)
+
 **Reminder**: If you are running in WSL and encounter any OS-specific instructions, follow the instructions for the **Linux OS** (specifically Ubuntu, which is a flavor of Linux).
 
 Optionally, if you plan to work with databases, you may also wish to complete the lesson [Using Databases and SQL](https://swcarpentry.github.io/sql-novice-survey).
