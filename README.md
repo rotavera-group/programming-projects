@@ -12,7 +12,9 @@ If you are on a Windows machine, follow these instructions to install the Window
    ```
 3. Re-start your machine.
 
-This creates a miniature Linux operating system on your computer, which you can access through a terminal. You can can open this Linux terminal by searching "WSL" in your taskbar clicking "Open". You can also click "Pin to taskbar" for easier access.
+This creates a miniature Linux operating system (OS) on your computer, which you can access through a terminal. You can can open this Linux terminal by searching "WSL" in your taskbar clicking "Open". You can also click "Pin to taskbar" for easier access.
+
+**Note**: This WSL terminal is *not* running on the Windows OS. It is running on an Ubuntu Linux OS. You will need to keep this in mind if you encounter any OS-specific instructions.
 
 ## 2. Learn the basics
 
@@ -21,6 +23,7 @@ To learn the basics of navigating the command line, working with `git`, and prog
 2. [Version Control with Git](https://swcarpentry.github.io/git-novice/)
 3. [Programming with Python](https://swcarpentry.github.io/python-novice-inflammation/)
 4. [Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder)
+**Reminder**: If you are running in WSL and encounter any OS-specific instructions, follow the instructions for the **Linux OS** (specifically Ubuntu, which is a flavor of Linux).
 
 Optionally, if you plan to work with databases, you may also wish to complete the lesson [Using Databases and SQL](https://swcarpentry.github.io/sql-novice-survey).
 
