@@ -8,7 +8,13 @@ import py3Dmol
 
 
 class Geometry(BaseModel):
-    """Geometry data structure."""
+    """Geometry data structure.
+
+    :param symbols: Atomic symbols
+    :param coordinates: Atomic coordinates (units: bohr)
+    :param charge: Total molecular charge
+    :param spin: Total electronic spin (multiplicity - 1)
+    """
 
     symbols: list[str]
     coordinates: NDArray
@@ -61,7 +67,7 @@ def coordinates(geo: Geometry, unit: str = units.DISTANCE_UNIT) -> NDArray:
 
 
 def charge(geo: Geometry) -> int:
-    """Get molecular charge.
+    """Get total molecular charge.
 
     :param geo: Geometry
     :return: Charge
@@ -70,7 +76,7 @@ def charge(geo: Geometry) -> int:
 
 
 def spin(geo: Geometry) -> int:
-    """Get spin.
+    """Get total electronic spin.
 
     spin = number of unpaired electrons = multiplicity - 1
 
