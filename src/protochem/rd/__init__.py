@@ -1,5 +1,5 @@
 """RDKit functions."""
 
-from . import mol_
+from . import mol
 
-__all__ = ["mol_"]
+__all__ = ["mol"]

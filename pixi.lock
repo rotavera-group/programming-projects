@@ -36,6 +36,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/charset-normalizer-3.4.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/comm-0.2.2-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/contourpy-1.3.1-py311hd18a35c_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/crest-3.0.2-hc15f34f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cycler-0.12.1-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/cyrus-sasl-2.1.27-h54b06d7_7.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/debugpy-1.8.12-py311hfdbb021_0.conda
@@ -57,6 +58,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/fqdn-1.5.1-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/freetype-2.12.1-h267a509_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/freetype-py-2.3.0-pyhd8ed1ab_0.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/noarch/geometric-1.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/greenlet-3.1.1-py311hfdbb021_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/h11-0.14.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/h2-4.1.0-pyhd8ed1ab_1.conda
@@ -147,6 +149,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/nbformat-5.10.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.5-h2d0b736_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/nest-asyncio-1.6.0-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/networkx-3.4.2-pyh267e887_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-7.3.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-shim-0.2.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/numpy-1.26.4-py311h64a7726_0.conda
@@ -250,6 +253,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/5e/c5/90466e9d4c77422a18c23531a7348b7d19b30958e47ae1586ad7ca8c7634/qcparse-0.7.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c7/18/c86eb8e0202e32dd3df50d43d7ff9854f8e0603945ff398974c1d91ac1ef/tomli_w-1.2.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/35/0c/a8f709ad11eed9e904fb94c5b5c6d9fa25735080cd551e1dbfc6d9a2d35d/xtb-22.1-cp311-cp311-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
       - pypi: .
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
@@ -627,6 +631,23 @@ packages:
   - pkg:pypi/contourpy?source=hash-mapping
   size: 278209
   timestamp: 1731428493722
+- conda: https://conda.anaconda.org/conda-forge/linux-64/crest-3.0.2-hc15f34f_0.conda
+  sha256: 9fc1d4d2de3589ddde3e33abc2752174bbfeeb5c9beffd3cf8069e0c7a6e7baa
+  md5: 16a18578d799e7d30c3baae2d5ed2ab2
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - _openmp_mutex >=4.5
+  - libblas >=3.9.0,<4.0a0
+  - libgcc >=13
+  - libgfortran
+  - libgfortran5 >=13.3.0
+  - liblapack >=3.9.0,<4.0a0
+  - xtb
+  license: LGPL-3.0-or-later
+  license_family: GPL
+  purls: []
+  size: 30725137
+  timestamp: 1724941626418
 - conda: https://conda.anaconda.org/conda-forge/noarch/cycler-0.12.1-pyhd8ed1ab_1.conda
   sha256: 9827efa891e507a91a8a2acf64e210d2aff394e1cde432ad08e1f8c66b12293c
   md5: 44600c4667a319d67dbe0681fc0bc833
@@ -882,6 +903,21 @@ packages:
   - pkg:pypi/freetype-py?source=hash-mapping
   size: 58932
   timestamp: 1650983451848
+- conda: https://conda.anaconda.org/conda-forge/noarch/geometric-1.1-pyhd8ed1ab_0.conda
+  sha256: c5dd4d9db5dc2f21ae5751383e96b2374620e89ae738956988218d02214a1969
+  md5: 5e7ad0e08cc157299f1c54c671062071
+  depends:
+  - networkx
+  - numpy
+  - python >=3.9
+  - setuptools
+  - six
+  license: MIT
+  license_family: MIT
+  purls:
+  - pkg:pypi/geometric?source=hash-mapping
+  size: 315444
+  timestamp: 1738005419936
 - conda: https://conda.anaconda.org/conda-forge/linux-64/greenlet-3.1.1-py311hfdbb021_1.conda
   sha256: 81685173a05dcd21d57da4c137eb30643414034aba98a8cec31089b9e53e3413
   md5: d44da5fc47328530ad83e190af89576f
@@ -2139,6 +2175,22 @@ packages:
   - pkg:pypi/nest-asyncio?source=hash-mapping
   size: 11543
   timestamp: 1733325673691
+- conda: https://conda.anaconda.org/conda-forge/noarch/networkx-3.4.2-pyh267e887_2.conda
+  sha256: 39625cd0c9747fa5c46a9a90683b8997d8b9649881b3dc88336b13b7bdd60117
+  md5: fd40bf7f7f4bc4b647dc8512053d9873
+  depends:
+  - python >=3.10
+  - python
+  constrains:
+  - numpy >=1.24
+  - scipy >=1.10,!=1.11.0,!=1.11.1
+  - matplotlib >=3.7
+  - pandas >=2.0
+  license: BSD-3-Clause
+  license_family: BSD
+  purls: []
+  size: 1265008
+  timestamp: 1731521053408
 - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-7.3.2-pyhd8ed1ab_0.conda
   sha256: 07138543549d6672376115a000c5fd26c3711f0b2b5c9464889bccfe711d8e59
   md5: 48b0461a947a0537427fc836b9bd2d33
@@ -2439,10 +2491,10 @@ packages:
 - pypi: .
   name: protopilot
   version: 0.1.0
-  sha256: a162b7c4447a9851b03dc5579acb877d40eac13fc2d801c6df7c484a6dc8b3ca
+  sha256: f951f19c3de6312b5bd601626fd669a5ccf7dd77d31ab8ac8ae45362244c745e
   requires_dist:
   - qcio[view]>=0.12.1,<0.13
-  - qcop>=0.9.4,<0.10
+  - qcop[xtb]>=0.9.4,<0.10
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/psutil-6.1.1-py311h9ecbd09_0.conda
@@ -3413,6 +3465,20 @@ packages:
   purls: []
   size: 33005
   timestamp: 1734229037766
+- pypi: https://files.pythonhosted.org/packages/35/0c/a8f709ad11eed9e904fb94c5b5c6d9fa25735080cd551e1dbfc6d9a2d35d/xtb-22.1-cp311-cp311-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+  name: xtb
+  version: '22.1'
+  sha256: 943229d4e9665f7d8c63bf6461805bbea927b13b525ac6be7239461c6b2c6640
+  requires_dist:
+  - cffi
+  - numpy
+  - ase ; extra == 'ase'
+  - qcelemental ; extra == 'qcschema'
+  - pytest ; extra == 'test'
+  - pytest-cov ; extra == 'test'
+  - ase ; extra == 'test'
+  - qcelemental ; extra == 'test'
+  requires_python: '>=3.7'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/xtb-6.7.1-hc15f34f_2.conda
   sha256: 4d38913fe38568f9cf283f216aef50e6e486ae0a45cca79865299fe62b5e4a3a
   md5: 95b67966e26ff3bf5951927dda714294

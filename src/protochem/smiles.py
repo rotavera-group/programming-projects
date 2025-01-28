@@ -10,5 +10,5 @@ def geometry(smi: str) -> Geometry:
     :param smi: SMILES
     :return: Geometry
     """
-    mol = rd.mol_.from_smiles(smi, with_coords=True)
+    mol = rd.mol.from_smiles(smi, with_coords=True)
     return geom.from_rdkit_molecule(mol)
