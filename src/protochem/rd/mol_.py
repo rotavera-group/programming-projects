@@ -24,7 +24,7 @@ def from_smiles(smi: str, with_coords: bool = False) -> Mol:
 
 # properties
 def symbols(mol: Mol) -> list[str]:
-    """Get atomic symbols of RDKit molecule.
+    """Get atomic symbols.
 
     :param mol: RDKit molecule
     :return: Symbols
@@ -33,7 +33,7 @@ def symbols(mol: Mol) -> list[str]:
 
 
 def coordinates(mol: Mol) -> NDArray | None:
-    """Get atomic coordinates of RDKit molecule.
+    """Get atomic coordinates.
 
     Requires an embedded molecule (otherwise, returns None).
 
@@ -51,7 +51,7 @@ def coordinates(mol: Mol) -> NDArray | None:
 
 
 def charge(mol: Mol) -> int:
-    """Get charge of RDKit molecule.
+    """Get molecular charge.
 
     :param mol: RDKit molecule
     :return: Charge
@@ -60,9 +60,11 @@ def charge(mol: Mol) -> int:
 
 
 def spin(mol: Mol) -> int:
-    """Determine/guess spin of RDKit molecule.
+    """Determine (or guess) molecular spin.
 
     spin = number of unpaired electrons = multiplicity - 1
+
+    TODO: Add flags to decide between high- and low-spin guess where ambiguous.
 
     :param mol: RDKit molecule
     :return: Spin
