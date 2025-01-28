@@ -3,10 +3,8 @@
 from pydantic import BaseModel
 from .util.types import NDArray
 from . import rd
+from .util import units
 import qcio
-from pint import Quantity
-
-DISTANCE_UNIT = "angstrom"
 
 
 class Geometry(BaseModel):
@@ -44,14 +42,13 @@ def symbols(geo: Geometry) -> list[str]:
     return geo.symbols
 
 
-def coordinates(geo: Geometry, unit: str = DISTANCE_UNIT) -> NDArray:
+def coordinates(geo: Geometry, unit: str = units.DISTANCE_UNIT) -> NDArray:
     """Get atomic coordinates.
 
     :param geo: Geometry
     :return: Coordinates
     """
-    unit_conv = Quantity(DISTANCE_UNIT).m_as(unit) if unit != DISTANCE_UNIT else 1.0
-    return geo.coordinates * unit_conv
+    return geo.coordinates * units.distance_conversion(units.DISTANCE_UNIT, unit)
 
 
 def charge(geo: Geometry) -> int:

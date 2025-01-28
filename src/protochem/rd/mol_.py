@@ -6,6 +6,9 @@ from rdkit.Chem import Mol
 from rdkit.Chem import AllChem, Descriptors
 import copy
 from ..util.types import NDArray
+from ..util import units
+
+RDKIT_DISTANCE_UNIT = "angstrom"
 
 
 def from_smiles(smi: str, with_coords: bool = False) -> Mol:
@@ -32,7 +35,7 @@ def symbols(mol: Mol) -> list[str]:
     return [a.GetSymbol() for a in mol.GetAtoms()]
 
 
-def coordinates(mol: Mol) -> NDArray | None:
+def coordinates(mol: Mol, unit: str = units.DISTANCE_UNIT) -> NDArray | None:
     """Get atomic coordinates.
 
     Requires an embedded molecule (otherwise, returns None).
@@ -45,9 +48,9 @@ def coordinates(mol: Mol) -> NDArray | None:
 
     natms = mol.GetNumAtoms()
     conf = mol.GetConformer()
-    return numpy.array(
-        [conf.GetAtomPosition(i) for i in range(natms)], dtype=numpy.float64
-    )
+    coords = [conf.GetAtomPosition(i) for i in range(natms)]
+    coords = numpy.array(coords, dtype=numpy.float64)
+    return coords * units.distance_conversion(RDKIT_DISTANCE_UNIT, unit)
 
 
 def charge(mol: Mol) -> int:
