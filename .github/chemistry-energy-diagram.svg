@@ -33,7 +33,7 @@
      inkscape:zoom="0.6093122"
      inkscape:cx="271.61774"
      inkscape:cy="107.49826"
-     inkscape:window-x="-8"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
@@ -104,6 +104,13 @@
       </cc:License>
     </rdf:RDF>
   </metadata>
+  <rect
+     style="fill:#ffffff;stroke-width:3.02362"
+     id="rect1"
+     width="551.18274"
+     height="397.47223"
+     x="0"
+     y="0" />
   <path
      style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      d="m -125.66597,-683.33569 h 241.95271 c 18.14618,1.35215 36.90831,-1.35333 50.71429,-10.71429 15.68354,-10.63402 30.04085,-25.82041 55.1661,-93.43521 18.89094,-50.83758 28.23376,-124.54192 50.39535,-124.91032 30.23871,-0.50267 45.59582,43.5884 56.67305,65.88637 19.56633,37.7298 32.04439,51.94031 109.39744,56.42378 57.18466,3.31449 158.13634,0.83268 234.09226,0.83268"
