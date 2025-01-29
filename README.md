@@ -54,6 +54,15 @@ This way, if you notice a typo, you can easily fix it on main branch and create 
 pull request for me to merge.
 
 
+### VS Code
+
+I highly recommend doing your work for these projects in [VS Code](https://code.visualstudio.com/docs).
+This is a huge help in navigating your code.
+For example, to see the code for a function you are calling, you can right click and select "Go to Definition".
+
+If you, like me, like to use [Vim](https://youtu.be/9n1dtmzqnCU?si=QHMSaJrciy0tuJUZ) for text-editing, I recommend the [VS Code Vim plugin](https://code.visualstudio.com/docs/getstarted/getting-started).
+
+
 ### Projects
 
 Once you are ready with your fork and branch, you can work through the projects in the following order:
