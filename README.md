@@ -28,7 +28,7 @@ To learn the basics of navigating the command line, working with `git`, and prog
 
 Optionally, if you plan to work with databases, you may also wish to complete the lesson [Using Databases and SQL](https://swcarpentry.github.io/sql-novice-survey).
 
-## 4. Do the projects
+## 3. Do the projects
 
 With some working knowledge of Unix, Git, and Python, you are ready to start on the programming projects!
 You will be continuing to practice these skills as you go along and, in fact, will be doing so as long as you continue programming, so take time to review as needed.
