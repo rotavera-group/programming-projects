@@ -1,6 +1,7 @@
 """QCIO functions."""
 
 import qcio
+from qcio.view import view
 from ..geom import Geometry
 from .. import geom
 
@@ -33,3 +34,13 @@ def geometry(struc: qcio.Structure) -> Geometry:
         charge=struc.charge,
         spin=struc.multiplicity - 1,
     )
+
+
+def display(struc: qcio.Structure, width: int = 600, height: int = 450) -> None:
+    """Display structure.
+
+    :param struc: QCIO Structure
+    :param width: Width
+    :param height: Height
+    """
+    view(struc, width=width, height=height)

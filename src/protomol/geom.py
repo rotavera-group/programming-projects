@@ -115,8 +115,6 @@ def xyz_string(geo: str) -> str:
 def display(geo: str, width: int = 600, height: int = 450) -> None:
     """Display geometry.
 
-    For now, using QCIO for this.
-
     :param geo: Geometry
     :param width: Width
     :param height: Height
