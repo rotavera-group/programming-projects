@@ -28,14 +28,14 @@ To learn the basics of navigating the command line, working with `git`, and prog
 
 Optionally, if you plan to work with databases, you may also wish to complete the lesson [Using Databases and SQL](https://swcarpentry.github.io/sql-novice-survey).
 
-## 3. Do the projects
+## 4. Do the projects
 
-If you have your terminal set up and have some working familiarity with Unix, Git, and Python, you are now ready to start on the programming projects!
-You will be continuing to practice these skills as you go along.
-(In fact, you will be doing so as long as you continue programming,
-so take time to review as needed!)
+With some working knowledge of Unix, Git, and Python, you are ready to start on the programming projects!
+You will be continuing to practice these skills as you go along and, in fact, will be doing so as long as you continue programming, so take time to review as needed.
 
-Set-up instructions:
+### Set-up
+
+Follow these instructions to get set up to start the projects:
 1. [Create a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) of this repository.
 2. [Clone the fork](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) to your machine.
 3. [Install Pixi](https://pixi.sh/latest/#installation) and run `pixi install` inside the repository. Pixi is the package manager that install your dependencies for you.[^2]
@@ -51,6 +51,9 @@ This way, if you notice a typo, you can do so on your main branch and create a
 pull request that I can merge to fix it.
 Eventually, you may also wish to contribute to the instructions, or contribute
 projects of your own!
+
+
+### Projects
 
 Once you are ready with your fork and branch, you can work through the projects in the following order:
 
