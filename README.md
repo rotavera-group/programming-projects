@@ -28,4 +28,34 @@ To learn the basics of navigating the command line, working with `git`, and prog
 
 Optionally, if you plan to work with databases, you may also wish to complete the lesson [Using Databases and SQL](https://swcarpentry.github.io/sql-novice-survey).
 
+## 3. Do the projects
+
+Once you are ready, you can start on the programming projects.
+You will be continuing to practice your Git/GitHub and programming skills as you go
+along.
+You will be continuing to develop these skills as long as you keep programming,
+so take time to review as needed.
+
+Set-up instructions:
+1. [Create a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) of this repository.
+2. Create a branch for the first exercise (see below).
+3. When you are ready for feedback,
+[create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request)
+to this repository from the branch on your fork. I will give you feedback directly on your pull request.
+4. Continue on in this way, creating a new branch for each exercise or part of a project.
+
+Please keep the `main` branch of your fork clean and do all of your work on
+separate branches.
+This way, if you notice a typo, you can do so on your main branch and create a
+pull request that I can merge to fix it.
+Eventually, you may also wish to contribute to the instructions, or contribute
+projects of your own!
+
+Once you are ready with your fork and branch, you can work through the projects in the following order:
+
+1. [Introduction, Part 1: Cheminformatics](projects/00_cheminformatics/background.ipynb) (includes an exercise)
+2. [Introduction, Part 2: Quantum Chemistry](projects/01_quantum-chemistry/background.ipynb)
+3. [Project 1, Part 1: Hessian Calculation](projects/02_hessian/background.ipynb)
+3. [Project 1, Part 2: Vibrational Analysis](projects/03_vibrations/background.ipynb) (coming soon)
+
 [^1]:  https://learn.microsoft.com/en-us/windows/wsl/install#install-wsl-command)
