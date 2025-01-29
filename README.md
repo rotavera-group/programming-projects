@@ -30,27 +30,28 @@ Optionally, if you plan to work with databases, you may also wish to complete th
 
 ## 3. Do the projects
 
-With some working knowledge of Unix, Git, and Python, you are ready to start on the programming projects!
+With some working knowledge of Unix, Git, and Python, you are ready to start the programming projects!
 You will be continuing to practice these skills as you go along and, in fact, will be doing so as long as you continue programming, so take time to review as needed.
 
 ### Set-up
 
-Follow these instructions to get set up to start the projects:
+Before starting the projects, follow these instructions to set up your repository and your environment:
 1. [Create a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) of this repository.
 2. [Clone the fork](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) to your machine.
-3. [Install Pixi](https://pixi.sh/latest/#installation) and run `pixi install` inside the repository. Pixi is the package manager that install your dependencies for you.[^2]
-5. [Create a new branch](https://stackoverflow.com/a/6824219) for first tutorial.
+3. [Install Pixi](https://pixi.sh/latest/#installation) and run `pixi install` inside the repository. [Pixi](https://pixi.sh/latest/basic_usage/) is the package manager that will create your environment.[^2]
+5. [Create a new branch](https://stackoverflow.com/a/6824219) for the first tutorial.
 6. Complete the tutorial, saving your work to this branch.
 7. [Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) from your branch to this repository
 to submit your work for feedback when ready. I will give feedback directly on your pull request.
-8. Continue on in this way, creating a new branch for each tutorial.[^3]
 
-Please keep the `main` branch of your fork clean and do all of your work on
+Repeat steps 5-7 as you go through the tutorials, creating a new branch for each one.
+In doing so, you may wish to branch off of your previous working branch, rather than the `main` branch,
+so that you have your previous code to start from.
+
+**Note**: Please keep the `main` branch of your fork clean and do all of your work on
 separate branches.
-This way, if you notice a typo, you can do so on your main branch and create a
-pull request that I can merge to fix it.
-Eventually, you may also wish to contribute to the instructions, or contribute
-projects of your own!
+This way, if you notice a typo, you can easily fix it on main branch and create a
+pull request for me to merge.
 
 
 ### Projects
@@ -62,6 +63,7 @@ Once you are ready with your fork and branch, you can work through the projects 
 3. [Project 1, Part 1: Hessian Calculation](projects/02_hessian/background.ipynb)
 3. [Project 1, Part 2: Vibrational Analysis](projects/03_vibrations/background.ipynb) (coming soon)
 
+Happy programming!
+
 [^1]: https://learn.microsoft.com/en-us/windows/wsl/install#install-wsl-command)
 [^2]: You can activate the Pixi environment using the command `pixi shell`.
-[^3]: As you progress, you may wish to branch off of your previous work, rather than the main branch, to copy over your previous code.
