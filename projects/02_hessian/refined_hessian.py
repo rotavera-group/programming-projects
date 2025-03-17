@@ -34,7 +34,7 @@ def GetHessian(smi):
             if x == y: #sets the condition for the diagonals of the hessian, uses the more simple central dif formula for a single variable
                 for i in range(3): #iterates through sub calculations of central-dif-formula, assigned in order per formula
                     if i == 0:
-                        Coordinates_simple_copy[x] = Coordinates_simple[x]+displacement #offsets the coordinate by the displacement
+                        Coordinates_simple_copy[x] =+ displacement #offsets the coordinate by the displacement
                         Geometry_Temp.coordinates = Coordinates_simple_copy.reshape(len(Opt_Geometry.symbols),3) #returns the simple coordinates to the proper array shape
                         structure_temp = qc.struc.from_geometry(Geometry_Temp)
                         Input_Temp = qcio.ProgramInput(structure = structure_temp, calctype = "energy", model = {"method":"gfn2"})
@@ -42,7 +42,7 @@ def GetHessian(smi):
                         Energy_Temp_Result = Output_temp.results.energy
                         energy_values.append(Energy_Temp_Result)
                     elif i == 1:
-                        Coordinates_simple_copy[x] = Coordinates_simple[x]-displacement
+                        Coordinates_simple_copy[x] =- displacement
                         Geometry_Temp.coordinates = Coordinates_simple_copy.reshape(len(Opt_Geometry.symbols),3) 
                         structure_temp = qc.struc.from_geometry(Geometry_Temp)
                         Input_Temp = qcio.ProgramInput(structure = structure_temp, calctype = "energy", model = {"method":"gfn2"})
@@ -60,8 +60,8 @@ def GetHessian(smi):
             else:  #calculates the non diagonals, much of the general structure is the same, therefore limited comments
                 for n in range(6):
                     if n == 0:
-                        Coordinates_simple_copy[x] = Coordinates_simple[x]+displacement
-                        Coordinates_simple_copy[y] = Coordinates_simple[y]+displacement
+                        Coordinates_simple_copy[x] =+ displacement
+                        Coordinates_simple_copy[y] =+ displacement
                         Geometry_Temp.coordinates = Coordinates_simple_copy.reshape(len(Opt_Geometry.symbols),3) 
                         structure_temp = qc.struc.from_geometry(Geometry_Temp)
                         Input_Temp = qcio.ProgramInput(structure = structure_temp, calctype = "energy", model = {"method":"gfn2"})
@@ -69,8 +69,8 @@ def GetHessian(smi):
                         Energy_Temp_Result = Output_temp.results.energy
                         energy_values.append(Energy_Temp_Result)
                     elif n == 1:
-                        Coordinates_simple_copy[x] = Coordinates_simple[x]-displacement
-                        Coordinates_simple_copy[y] = Coordinates_simple[y]-displacement
+                        Coordinates_simple_copy[x] =- displacement
+                        Coordinates_simple_copy[y] =- displacement
                         Geometry_Temp.coordinates = Coordinates_simple_copy.reshape(len(Opt_Geometry.symbols),3) 
                         structure_temp = qc.struc.from_geometry(Geometry_Temp)
                         Input_Temp = qcio.ProgramInput(structure = structure_temp, calctype = "energy", model = {"method":"gfn2"})
@@ -78,7 +78,7 @@ def GetHessian(smi):
                         Energy_Temp_Result = Output_temp.results.energy
                         energy_values.append(Energy_Temp_Result)
                     elif n == 2:
-                        Coordinates_simple_copy[x] = Coordinates_simple[x]+displacement
+                        Coordinates_simple_copy[x] =+ displacement
                         Geometry_Temp.coordinates = Coordinates_simple_copy.reshape(len(Opt_Geometry.symbols),3) 
                         structure_temp = qc.struc.from_geometry(Geometry_Temp)
                         Input_Temp = qcio.ProgramInput(structure = structure_temp, calctype = "energy", model = {"method":"gfn2"})
@@ -86,7 +86,7 @@ def GetHessian(smi):
                         Energy_Temp_Result = Output_temp.results.energy
                         energy_values.append(Energy_Temp_Result)
                     elif n == 3:
-                        Coordinates_simple_copy[x] = Coordinates_simple[x]-displacement
+                        Coordinates_simple_copy[x] =- displacement
                         Geometry_Temp.coordinates = Coordinates_simple_copy.reshape(len(Opt_Geometry.symbols),3) 
                         structure_temp = qc.struc.from_geometry(Geometry_Temp)
                         Input_Temp = qcio.ProgramInput(structure = structure_temp, calctype = "energy", model = {"method":"gfn2"})
@@ -94,7 +94,7 @@ def GetHessian(smi):
                         Energy_Temp_Result = Output_temp.results.energy
                         energy_values.append(Energy_Temp_Result)
                     elif n == 4:
-                        Coordinates_simple_copy[y] = Coordinates_simple[y]+displacement
+                        Coordinates_simple_copy[y] =+ displacement
                         Geometry_Temp.coordinates = Coordinates_simple_copy.reshape(len(Opt_Geometry.symbols),3) 
                         structure_temp = qc.struc.from_geometry(Geometry_Temp)
                         Input_Temp = qcio.ProgramInput(structure = structure_temp, calctype = "energy", model = {"method":"gfn2"})
@@ -102,7 +102,7 @@ def GetHessian(smi):
                         Energy_Temp_Result = Output_temp.results.energy
                         energy_values.append(Energy_Temp_Result)
                     elif n == 5:
-                        Coordinates_simple_copy[y] = Coordinates_simple[y]-displacement
+                        Coordinates_simple_copy[y] =- displacement
                         Geometry_Temp.coordinates = Coordinates_simple_copy.reshape(len(Opt_Geometry.symbols),3) 
                         structure_temp = qc.struc.from_geometry(Geometry_Temp)
                         Input_Temp = qcio.ProgramInput(structure = structure_temp, calctype = "energy", model = {"method":"gfn2"})
@@ -123,7 +123,8 @@ def GetHessian(smi):
 
 
 
-
+value = GetHessian("C")
+print(value)
 
 
 
