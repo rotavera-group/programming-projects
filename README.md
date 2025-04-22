@@ -70,8 +70,8 @@ Once you are ready with your fork and branch, you can work through the projects 
 1. [Introduction, Part 1: Cheminformatics](projects/00_cheminformatics/background.ipynb) (includes an exercise)
 2. [Introduction, Part 2: Quantum Chemistry](projects/01_quantum-chemistry/background.ipynb)
 3. [Project 1, Part 1: Hessian Calculation](projects/02_hessian/background.ipynb)
-3. [Introduction, Part 3: The Eigenvalue Problem](projects/03_eigenvalue-problem/background.ipynb)
-3. [Project 1, Part 2: Vibrational Analysis](projects/04_vibrations/background.ipynb) (coming soon)
+4. [Introduction, Part 3: The Eigenvalue Problem](projects/03_eigenvalue-problem/background.ipynb)
+5. [Project 1, Part 2: Vibrational Analysis](projects/04_vibrations/background.ipynb)
 
 Happy programming!
 
