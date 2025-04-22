@@ -254,12 +254,17 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.23.0-py311hbc35293_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.6-ha6fb4c9_0.conda
+      - pypi: https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/6e/c6/ac0b6c1e2d138f1002bcf799d330bd6d85084fece321e662a14223794041/Deprecated-1.2.18-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ce/31/55cd413eaccd39125368be33c46de24a1f639f2e12349b0361b4678f3915/eval_type_backport-0.2.2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/6f/2c/5ca2d5c503b788b638c79308f5dfb1f4cb9fad95d070fc3c2e0b81ce8542/mendeleev-1.0.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/33/07/fcfdd7a2872f5b348953de35acce1544dab0c1e8368dca54279b1cde5c15/pyfiglet-0.8.post1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/77/7d/83b79b43068d0f948db064668dfda1df634c2918b9fce3c74d3e5fc84138/qcio-0.12.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e6/56/95944f2a093a3b5415e7996cf78044d63c1710a97c00c0a43cf37c5f9f8a/qcop-0.9.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/5e/c5/90466e9d4c77422a18c23531a7348b7d19b30958e47ae1586ad7ca8c7634/qcparse-0.7.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c7/18/c86eb8e0202e32dd3df50d43d7ff9854f8e0603945ff398974c1d91ac1ef/tomli_w-1.2.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/b4/b0/9fc566b0fe08b282c850063591a756057c3247b2362b9286429ec5bf1721/wrapt-1.17.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/35/0c/a8f709ad11eed9e904fb94c5b5c6d9fa25735080cd551e1dbfc6d9a2d35d/xtb-22.1-cp311-cp311-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
       - pypi: .
 packages:
@@ -610,6 +615,11 @@ packages:
   - pkg:pypi/charset-normalizer?source=hash-mapping
   size: 47438
   timestamp: 1735929811779
+- pypi: https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl
+  name: colorama
+  version: 0.4.6
+  sha256: 4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6
+  requires_python: '>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*'
 - conda: https://conda.anaconda.org/conda-forge/noarch/comm-0.2.2-pyhd8ed1ab_1.conda
   sha256: 7e87ef7c91574d9fac19faedaaee328a70f718c9b4ddadfdc0ba9ac021bd64af
   md5: 74673132601ec2b7fc592755605f4c1b
@@ -728,6 +738,18 @@ packages:
   - pkg:pypi/defusedxml?source=hash-mapping
   size: 24062
   timestamp: 1615232388757
+- pypi: https://files.pythonhosted.org/packages/6e/c6/ac0b6c1e2d138f1002bcf799d330bd6d85084fece321e662a14223794041/Deprecated-1.2.18-py2.py3-none-any.whl
+  name: deprecated
+  version: 1.2.18
+  sha256: bd5011788200372a32418f888e326a09ff80d0214bd961147cfed01b5c018eec
+  requires_dist:
+  - wrapt>=1.10,<2
+  - tox ; extra == 'dev'
+  - pytest ; extra == 'dev'
+  - pytest-cov ; extra == 'dev'
+  - bump2version<1 ; extra == 'dev'
+  - setuptools ; python_full_version >= '3.12' and extra == 'dev'
+  requires_python: '>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/dftd4-3.7.0-hc15f34f_3.conda
   sha256: 37756a6155ad9e2617e84f1821dbcb4c935f6a4531d90203e7bbceddbf272130
   md5: da9bb20b9cd653ec5852cc41229c27c0
@@ -2100,6 +2122,22 @@ packages:
   purls: []
   size: 462305
   timestamp: 1730298456687
+- pypi: https://files.pythonhosted.org/packages/6f/2c/5ca2d5c503b788b638c79308f5dfb1f4cb9fad95d070fc3c2e0b81ce8542/mendeleev-1.0.0-py3-none-any.whl
+  name: mendeleev
+  version: 1.0.0
+  sha256: 8474658ffa7025ac0367c791e715870a6db2756a47698f032178f978b2f1b2f1
+  requires_dist:
+  - pygments>=2.11.2,<3.0.0
+  - sqlalchemy>=1.4.0
+  - colorama>=0.4.6,<0.5.0
+  - deprecated>=1.2.14,<2.0.0
+  - numpy>=1.21,<2.0 ; python_full_version < '3.12'
+  - numpy>=2.0,<3.0 ; python_full_version >= '3.12'
+  - pandas>=1.0.0 ; python_full_version < '3.12'
+  - pandas>=2.1,<3.0 ; python_full_version >= '3.12' and python_full_version < '3.14'
+  - pydantic>=2.9.2,<3.0.0
+  - pyfiglet>=0.8.post1,<0.9
+  requires_python: '>=3.9,<3.14'
 - conda: https://conda.anaconda.org/conda-forge/noarch/mistune-3.1.0-pyhd8ed1ab_0.conda
   sha256: d932404dc610464130db5f36f59cd29947a687d9708daaad369d0020707de41a
   md5: d10024c163a52eeecbb166fdeaef8b12
@@ -2572,10 +2610,11 @@ packages:
 - pypi: .
   name: protopilot
   version: 0.1.0
-  sha256: 8bcf0756e80f547856a781526cafb4cd7726db1ef0944f92e909d2fe9d3cba69
+  sha256: 474b50cd00ccd7718dbe7dc2934551b55dde74c37dd34fd74474e3b1aaf3b7fb
   requires_dist:
   - qcio[view]>=0.12.1,<0.13
   - qcop[xtb]>=0.9.4,<0.10
+  - mendeleev>=1.0.0,<2
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/psutil-6.1.1-py311h9ecbd09_0.conda
@@ -2693,6 +2732,10 @@ packages:
   - pkg:pypi/pydantic-core?source=hash-mapping
   size: 1640287
   timestamp: 1734571788310
+- pypi: https://files.pythonhosted.org/packages/33/07/fcfdd7a2872f5b348953de35acce1544dab0c1e8368dca54279b1cde5c15/pyfiglet-0.8.post1-py2.py3-none-any.whl
+  name: pyfiglet
+  version: 0.8.post1
+  sha256: d555bcea17fbeaf70eaefa48bb119352487e629c9b56f30f383e2c62dd67a01c
 - conda: https://conda.anaconda.org/conda-forge/noarch/pygments-2.19.1-pyhd8ed1ab_0.conda
   sha256: 28a3e3161390a9d23bc02b4419448f8d27679d9e2c250e29849e37749c8de86b
   md5: 232fb4577b6687b2d503ef8e254270c9
@@ -3444,6 +3487,11 @@ packages:
   - pkg:pypi/widgetsnbextension?source=hash-mapping
   size: 898402
   timestamp: 1733128654300
+- pypi: https://files.pythonhosted.org/packages/b4/b0/9fc566b0fe08b282c850063591a756057c3247b2362b9286429ec5bf1721/wrapt-1.17.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+  name: wrapt
+  version: 1.17.2
+  sha256: 1a7ed2d9d039bd41e889f6fb9364554052ca21ce823580f6a07c4ec245c1f5d6
+  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/noarch/xarray-2023.8.0-pyhd8ed1ab_0.conda
   sha256: f6b4f46ed3b94f5f74823a8341d8aaeb9fe894540715e65bf72fa1f7c72c7e1b
   md5: a8104cede521616573e228c27f9edc97
