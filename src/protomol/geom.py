@@ -1,10 +1,15 @@
 """Geometry data structure and functions."""
 
+import pint
+import py3Dmol
+import pyparsing as pp
+from numpy.typing import ArrayLike
 from pydantic import BaseModel
-from .util.types import NDArray
+from pyparsing import pyparsing_common as ppc
+
 from . import rd
 from .util import units
-import py3Dmol
+from .util.types import NDArray
 
 
 class Geometry(BaseModel):
@@ -23,8 +28,33 @@ class Geometry(BaseModel):
 
 
 # constructors
+def from_data(
+    symbols: list[str],
+    coordinates: ArrayLike,
+    charge: int = 0,
+    spin: int = 0,
+    unit: str = "bohr",
+) -> Geometry:
+    """Generate geometry from data.
+
+    :param symbols: Atomic symbols
+    :param coordinates: Atomic coordinates (units: bohr)
+    :param charge: Total molecular charge
+    :param spin: Total electronic spin (multiplicity - 1)
+    :param unit: Distance unit
+    :return: Geometry
+    """
+    coordinates = pint.Quantity(coordinates, unit).m_as("bohr")
+    return Geometry(
+        symbols=symbols,
+        coordinates=coordinates,
+        charge=charge,
+        spin=spin,
+    )
+
+
 def from_rdkit_molecule(mol: rd.mol.Mol) -> Geometry:
-    """Generate geometry from RDKit molecule
+    """Generate geometry from RDKit molecule.
 
     :param mol: Molecule
     :return: Geometry
@@ -61,6 +91,7 @@ def coordinates(geo: Geometry, unit: str = units.DISTANCE_UNIT) -> NDArray:
     """Get atomic coordinates.
 
     :param geo: Geometry
+    :param unit: Distance unit
     :return: Coordinates
     """
     return geo.coordinates * units.distance_conversion(units.DISTANCE_UNIT, unit)
@@ -110,6 +141,28 @@ def xyz_string(geo: Geometry) -> str:
         f"{s} {x:10.6f} {y:10.6f} {z:10.6f}"
         for s, (x, y, z) in zip(symbs, xyzs, strict=True)
     )
+
+
+CHAR = pp.Char(pp.alphas)
+SYMBOL = pp.Combine(CHAR + pp.Opt(CHAR))
+XYZ_LINE = SYMBOL + pp.Group(ppc.fnumber * 3) + pp.Suppress(... + pp.LineEnd())
+
+
+def from_xyz_string(geo_str: str) -> Geometry:
+    """Read geometry from XYZ string.
+
+    :param geo_str: _description_
+    :return: _description_
+    """
+    geo_str = geo_str.strip()
+    lines = geo_str.splitlines()[2:]
+    if not lines:
+        return from_data(symbols=[], coordinates=[])
+
+    print([XYZ_LINE.parse_string(line).as_list() for line in lines])
+    symbs, coords = zip(*[XYZ_LINE.parse_string(line).as_list() for line in lines])
+    geo = from_data(symbols=symbs, coordinates=coords, unit="angstrom")
+    return geo
 
 
 def display(geo: Geometry, width: int = 600, height: int = 450) -> None:
