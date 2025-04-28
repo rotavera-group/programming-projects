@@ -97,7 +97,7 @@ def multiplicity(geo: Geometry) -> int:
 
 
 # conversions
-def xyz_string(geo: str) -> str:
+def xyz_string(geo: Geometry) -> str:
     """Serialize as XYZ string.
 
     :param geo: Geometry
@@ -112,7 +112,7 @@ def xyz_string(geo: str) -> str:
     )
 
 
-def display(geo: str, width: int = 600, height: int = 450) -> None:
+def display(geo: Geometry, width: int = 600, height: int = 450) -> None:
     """Display geometry.
 
     :param geo: Geometry
